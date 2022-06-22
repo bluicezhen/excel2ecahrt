@@ -12,11 +12,18 @@ option = {
         'type': 'time'
     },
     'yAxis': {
-        'type': 'value'
+        'type': 'value',
+        'scale': True
     },
     'tooltip': {
         'trigger': 'axis',
         'order': 'valueDesc'
+    },
+    'grid': {
+        'left': '3%',
+        'right': '3%',
+        'top': '3%',
+        'bottom': '3%'
     },
     'legend': {
         'data': []
