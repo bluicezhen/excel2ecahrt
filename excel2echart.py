@@ -1,7 +1,9 @@
 import json
+import os
 import re
 import sys
 from openpyxl import load_workbook
+
 
 wb = load_workbook(
     filename=sys.argv[1], read_only=True)
@@ -62,7 +64,7 @@ wb.close()
 
 json_data = json.dumps(option, ensure_ascii=False, indent=None)
 
-html_template = open('./chart.html.template', 'rt')
+html_template = open(f'{os.path.dirname(__file__)}/chart.html.template', 'rt')
 html_template_str = html_template.read()
 html_template.close()
 

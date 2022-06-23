@@ -12,9 +12,7 @@ mkdir bin
 cat > ./bin/excel2ecahrt.sh <<- EOF
 #!/bin/bash
 filename="\$1"
-cd "$(pwd)"
-pipenv shell
-python excel2echart.py "\$filename"
+$(pipenv --venv)/bin/python $(pwd)/excel2echart.py "\$filename"
 EOF
 chmod +x ./bin/excel2ecahrt.sh
 echo "export PATH="$(pwd)/bin:$PATH" >> ~/.bash_profile
