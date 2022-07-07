@@ -26,6 +26,8 @@ excel2ecahrt.sh some.xlsx
 
 ## 3. Excel example
 
+https://bluicezhen.github.io/excel2ecahrt/
+
 | date       | bbl   | bmt   | gy    | xq   | ldjj  | mn    | sllh  | wd    |
 | ---------- | ----- | ----- | ----- | ---- | ----- | ----- | ----- | ----- |
 | 2022-05-26 |       | 100.5 | 118.2 |      | 109.3 | 76.3  |       | 57    |
