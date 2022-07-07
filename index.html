@@ -1,1 +1,128 @@
-<!DOCTYPE html><html><head><meta charset="utf-8" /><title>ECharts</title><script src="https://cdn.bootcdn.net/ajax/libs/echarts/5.3.3/echarts.min.js"></script></head><body><div id="main" style="width: 100vw; height:100vh;"></div><script type="text/javascript">var myChart = echarts.init(document.getElementById('main'));option = {"xAxis": {"type": "time"}, "yAxis": {"type": "value"}, "tooltip": {"trigger": "axis", "order": "valueDesc"}, "legend": {"data": ["芭芭拉", "班尼特", "甘雨", "行秋", "雷电将军", "莫娜", "神里绫华", "温迪", "香菱", "烟绯"]}, "series": [{"name": "芭芭拉", "type": "line", "smooth": true, "data": [["2022-06-21", 142.3], ["2022-06-22", 146.4]]}, {"name": "班尼特", "type": "line", "smooth": true, "data": [["2022-05-26", 100.5], ["2022-05-30", 108.5], ["2022-06-06", 166.8], ["2022-06-22", 166.8]]}, {"name": "甘雨", "type": "line", "smooth": true, "data": [["2022-05-26", 118.2], ["2022-06-06", 153.7], ["2022-06-13", 162.3], ["2022-06-22", 162.3]]}, {"name": "行秋", "type": "line", "smooth": true, "data": [["2022-06-06", 83.1], ["2022-06-22", 83.1]]}, {"name": "雷电将军", "type": "line", "smooth": true, "data": [["2022-05-26", 109.3], ["2022-06-06", 145.7], ["2022-06-22", 145.7]]}, {"name": "莫娜", "type": "line", "smooth": true, "data": [["2022-05-26", 76.3], ["2022-06-06", 131.6], ["2022-06-22", 131.6]]}, {"name": "神里绫华", "type": "line", "smooth": true, "data": [["2022-06-06", 86.6], ["2022-06-14", 88.7], ["2022-06-15", 90.5], ["2022-06-16", 115.9], ["2022-06-19", 117.1], ["2022-06-21", 117.7], ["2022-06-22", 117.7]]}, {"name": "温迪", "type": "line", "smooth": true, "data": [["2022-05-26", 57], ["2022-06-06", 119.1], ["2022-06-22", 119.1]]}, {"name": "香菱", "type": "line", "smooth": true, "data": [["2022-05-26", 142.1], ["2022-06-06", 151.3], ["2022-06-22", 151.3]]}, {"name": "烟绯", "type": "line", "smooth": true, "data": [["2022-05-26", 105.7], ["2022-06-06", 106.6], ["2022-06-22", 106.6]]}]};myChart.setOption(option);</script></body></html>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>ECharts</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/echarts/5.3.3/echarts.min.js"></script>
+</head>
+
+<body>
+    <div id="main" style="width: 100vw; height:100vh;"></div>
+    <script type="text/javascript">
+        var myChart = echarts.init(document.getElementById('main'));
+        option = {
+            "xAxis": {
+                "type": "time"
+            },
+            "yAxis": {
+                "type": "value"
+            },
+            "tooltip": {
+                "trigger": "axis",
+                "order": "valueDesc"
+            },
+            "legend": {
+                "data": ["芭芭拉", "班尼特", "甘雨", "行秋", "雷电将军", "莫娜", "神里绫华", "温迪", "香菱", "烟绯"]
+            },
+            "series": [{
+                "name": "芭芭拉",
+                "type": "line",
+                "smooth": true,
+                "data": [
+                    ["2022-06-21", 142.3],
+                    ["2022-06-22", 146.4]
+                ]
+            }, {
+                "name": "班尼特",
+                "type": "line",
+                "smooth": true,
+                "data": [
+                    ["2022-05-26", 100.5],
+                    ["2022-05-30", 108.5],
+                    ["2022-06-06", 166.8],
+                    ["2022-06-22", 166.8]
+                ]
+            }, {
+                "name": "甘雨",
+                "type": "line",
+                "smooth": true,
+                "data": [
+                    ["2022-05-26", 118.2],
+                    ["2022-06-06", 153.7],
+                    ["2022-06-13", 162.3],
+                    ["2022-06-22", 162.3]
+                ]
+            }, {
+                "name": "行秋",
+                "type": "line",
+                "smooth": true,
+                "data": [
+                    ["2022-06-06", 83.1],
+                    ["2022-06-22", 83.1]
+                ]
+            }, {
+                "name": "雷电将军",
+                "type": "line",
+                "smooth": true,
+                "data": [
+                    ["2022-05-26", 109.3],
+                    ["2022-06-06", 145.7],
+                    ["2022-06-22", 145.7]
+                ]
+            }, {
+                "name": "莫娜",
+                "type": "line",
+                "smooth": true,
+                "data": [
+                    ["2022-05-26", 76.3],
+                    ["2022-06-06", 131.6],
+                    ["2022-06-22", 131.6]
+                ]
+            }, {
+                "name": "神里绫华",
+                "type": "line",
+                "smooth": true,
+                "data": [
+                    ["2022-06-06", 86.6],
+                    ["2022-06-14", 88.7],
+                    ["2022-06-15", 90.5],
+                    ["2022-06-16", 115.9],
+                    ["2022-06-19", 117.1],
+                    ["2022-06-21", 117.7],
+                    ["2022-06-22", 117.7]
+                ]
+            }, {
+                "name": "温迪",
+                "type": "line",
+                "smooth": true,
+                "data": [
+                    ["2022-05-26", 57],
+                    ["2022-06-06", 119.1],
+                    ["2022-06-22", 119.1]
+                ]
+            }, {
+                "name": "香菱",
+                "type": "line",
+                "smooth": true,
+                "data": [
+                    ["2022-05-26", 142.1],
+                    ["2022-06-06", 151.3],
+                    ["2022-06-22", 151.3]
+                ]
+            }, {
+                "name": "烟绯",
+                "type": "line",
+                "smooth": true,
+                "data": [
+                    ["2022-05-26", 105.7],
+                    ["2022-06-06", 106.6],
+                    ["2022-06-22", 106.6]
+                ]
+            }]
+        };
+        myChart.setOption(option);
+    </script>
+</body>
+
+</html>

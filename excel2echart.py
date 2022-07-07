@@ -22,10 +22,10 @@ option = {
         'order': 'valueDesc'
     },
     'grid': {
-        'left': '3%',
+        'left': '6%',
         'right': '3%',
-        'top': '3%',
-        'bottom': '3%'
+        'top': '6%',
+        'bottom': '6%'
     },
     'legend': {
         'data': []
