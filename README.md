@@ -15,7 +15,7 @@ filename="\$1"
 $(pipenv --venv)/bin/python $(pwd)/excel2echart.py "\$filename"
 EOF
 chmod +x ./bin/excel2ecahrt.sh
-echo "export PATH="$(pwd)/bin:\$PATHi"" >> ~/.bash_profile
+echo "export PATH="$(pwd)/bin:\$PATH"" >> ~/.zshrc
 ```
 
 ## 2. Use
