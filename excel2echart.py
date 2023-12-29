@@ -8,6 +8,7 @@ from openpyxl import load_workbook
 wb = load_workbook(
     filename=sys.argv[1], read_only=True)
 ws = wb[wb.sheetnames[0]]
+# print(ws.max_column)
 
 option = {
     'xAxis': {
@@ -19,17 +20,27 @@ option = {
     },
     'tooltip': {
         'trigger': 'axis',
-        'order': 'valueDesc'
+        'order': 'valueDesc',
+        'padding': 0
     },
     'grid': {
-        'left': '6%',
-        'right': '3%',
-        'top': '6%',
-        'bottom': '6%'
+        'left': '40',
+        'right': '120' if ws.max_column > 7 else '40',
+        'top': '40',
+        'bottom': '40'
     },
+    # 当数据列为 1 时，不显示
     'legend': {
+        # 'type': 'scroll',
+        # 当数据列小于 7 个时时，数据标题置顶，否则置右
+        'orient': 'vertical' if ws.max_column > 7 else 'horizontal',
+        'padding': 0,
+        'right': 10,
+        'top': 20,
+        'bottom': 20,
+        'selector': True,
         'data': []
-    },
+    } if ws.max_column > 1 else {},
     'series': []
 }
 i = 0
@@ -38,7 +49,10 @@ for row in ws.rows:
     if i == 0:
         for cell in row:
             if j > 0:
-                option['legend']['data'].append(cell.value)
+                try:
+                    option['legend']['data'].append(cell.value)
+                except KeyError:
+                    pass
                 option['series'].append({
                     'name': cell.value,
                     'type': 'line',
@@ -59,7 +73,6 @@ for row in ws.rows:
                         .append([time_name, max([k[1] for k in option['series'][j - 1]['data']])])
             j += 1
     i += 1
-
 wb.close()
 
 json_data = json.dumps(option, ensure_ascii=False, indent=None)
