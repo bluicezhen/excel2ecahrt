@@ -21,7 +21,6 @@ option = {
     'tooltip': {
         'trigger': 'axis',
         'order': 'valueDesc',
-        'padding': 0
     },
     'grid': {
         'left': '40',
